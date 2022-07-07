@@ -1,0 +1,48 @@
+body{
+    background-color:darkcyan;
+
+}
+h1{
+    display: flex; 
+   justify-content: center;
+   margin-bottom: 50px;
+}
+h3{
+    display: flex;
+    justify-content: center;
+}
+
+.score {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.result{
+    display: flex;
+    justify-content: center;
+    padding-top: 25px;
+    padding-bottom: 125px;
+}
+
+.presult{
+    padding-right: 150px;
+}
+
+#computer{
+    margin-left:50px;
+    padding-left: 60px;
+
+}
+
+.selection{
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    padding: 25px;
+    margin: 15px;
+    cursor: pointer;
+    
+}
