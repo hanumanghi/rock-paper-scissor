@@ -18,11 +18,15 @@ h3{
     
 }
 
+h4 {
+    display: flex;
+    justify-content: center;
+}
 .result{
     display: flex;
     justify-content: center;
     padding-top: 25px;
-    padding-bottom: 125px;
+    padding-bottom: 25px;
 }
 
 .presult{

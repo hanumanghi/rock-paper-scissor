@@ -2,6 +2,7 @@
 const playerscore = document.querySelector('.presult');
 const computerscore = document.querySelector('.cresult');
 const playeroptions = document.querySelectorAll('.selection');
+const roundText = document.querySelector('.info');
 
 playeroptions.forEach (playeroption => playeroption.addEventListener('click', decision))
 
@@ -14,27 +15,26 @@ let playerRound = 0;
 let computerRound = 0;
 
 function playRound(playerSelection, computerSelection){
-
     if ((playerSelection == 'rock' && computerSelection == 'scissor')
      || (playerSelection == 'paper' && computerSelection == 'rock')
      || (playerSelection == 'scissor' && computerSelection == 'paper'))
        {
            playerscore.textContent = ++playerRound;
-           return 'Nice Job!' + playerSelection + 'beats' + computerSelection; 
+           roundText.textContent = 'Nice Job! ' + playerSelection + ' beats ' + computerSelection; 
        }   
     else if (playerSelection == computerSelection){
-        return "It\'s a tie, Try Again!"
+        roundText.textContent = "It\'s a tie, Try Again!"
     }
     else {
         computerscore.textContent = ++computerRound;
-        return  'Try Again!' + computerSelection +  'beats' + playerSelection;
+        roundText.textContent = 'Try Again! ' + computerSelection +  ' beats ' + playerSelection;
     }
+   
         }
 
-        function decision(e) {
-            let playerSelection = e.target.id;
-            let computerSelection = computerPlay()
-            playRound(playerSelection, computerSelection)
-            console.log(playerSelection, computerSelection)
-            
-           }
+ function decision(e) {
+    let playerSelection = e.target.id;
+    let computerSelection = computerPlay()
+     playRound(playerSelection, computerSelection)
+    console.log(playerSelection, computerSelection)
+    }
