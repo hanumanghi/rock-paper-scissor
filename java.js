@@ -29,7 +29,7 @@ function playRound(playerSelection, computerSelection){
         computerscore.textContent = ++computerRound;
         roundText.textContent = 'Try Again! ' + computerSelection +  ' beats ' + playerSelection;
     }
-   
+   endGame();
         }
 
  function decision(e) {
@@ -38,3 +38,32 @@ function playRound(playerSelection, computerSelection){
      playRound(playerSelection, computerSelection)
     console.log(playerSelection, computerSelection)
     }
+
+function disableButtons() {
+    document.getElementById('rock').disabled=true;
+    document.getElementById('paper').disabled=true;
+    document.getElementById('scissor').disabled=true;
+}
+
+function endGame() {
+        if(playerRound == 5 || computerRound == 5) {
+            disableButtons()
+            if (playerRound > computerRound) {
+                roundText.textContent = "Congratulations, You Won!!!";
+             }
+            else {
+                roundText.textContent = "OH NO, You Lost!";
+                
+            }
+    
+    const refresh = document.querySelector('.restart')
+    refresh.addEventListener('click', refreshPage)
+    refresh.style.display = 'flex';
+
+    function refreshPage(){
+    window.location.reload(true);
+            }
+        }
+    }
+
+

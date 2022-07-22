@@ -50,3 +50,11 @@ button {
     cursor: pointer;
     
 }
+
+.restart {
+    display: none;
+    justify-content: center;
+}
+
+
+
